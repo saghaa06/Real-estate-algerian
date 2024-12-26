@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmobiliéreDZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="ImmobiliéreDZ Logo">
+            <h1>ImmobiliéreDZ</h1>
+        </div>
+
+        <ul>
+            <li onclick="navigateTo('home')"> Home</li>
+            <li onclick="navigateTo('about')">About Us</li>
+            <li onclick="toggleContact()">Contact</li>
+            <li onclick="togglePreferences()">Preferences</li>
+            <li onclick="toggleSettings()">Settings</li>
+        </ul>
+        <div id="contact" class="dropdown">
+            <ul>
+                <li>Email: contact@immobiliereDZ.com</li>
+                <li>Phone: +213 123 456 789</li>
+            </ul>
+        </div>
+        <div id="preferences" class="dropdown">
+            <ul>
+                <li onclick="changeLanguage('ar')">Arabic</li>
+                <li onclick="changeLanguage('fr')">French</li>
+                <li onclick="changeLanguage('en')">English</li>
+            </ul>
+        </div>
+        <div id="settings" class="dropdown">
+            <ul>
+                <li id="darkMode">Dark Mode</li>
+                <li id="standardMode">Standard Mode</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <!-- Diaporama -->
+    <div class="diaporama">
+        <div class="overlay">
+            <h1>ImmobiliéreDZ</h1>
+            <p>Welcome to your dream home finder!</p>
+        </div>
+        <div class="slides">
+            <img src="assets/background/house1.jpg" alt="House 1">
+            <img src="assets/background/house2.jpg" alt="House 2">
+            <img src="assets/background/house3.jpg" alt="House 3">
+        </div>
+    </div>
+
+    <!-- Opportunities Section -->
+    <div class="opportunities">
+        <div class="left-panel">
+            <h2>Recent Rentals</h2>
+            <ul class="rental-list">
+                <li onclick="showRentalDetails('algiers1')">
+                    <p>Villa in Algiers</p>
+                    <img src="assets/houses/algiers1.jpg" alt="Villa in Algiers">
+                    
+                </li>
+                <li onclick="showRentalDetails('batna1')">
+                    <p>F3 Apartment in Batna</p>
+                    <img src="assets/houses/batna1.jpg" alt="F3 Apartment in Batna">
+                    
+                </li>
+                <li onclick="showRentalDetails('oran1')">
+                    <p>Villa in Oran</p>
+                    <img src="assets/houses/oran1.jpg" alt="Villa in Oran">
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="chatbot">
+                <div class="chatbot-header">ImmobiliéreDZ Chatbot</div>
+                <iframe src="https://saghaaa-immobilieredz01.hf.space/" frameborder="0"></iframe>
+                <div>
+            </div>
+        </div>
+    </div> 
+    
+
+    <!-- About Section -->
+    <div class="about">
+        <h2>About Us</h2>
+        <p>We are a real estate agency committed to helping you find your dream home. 
+            At ImmobiliéreDZ, we offer a wide range of properties across Algeria,
+            providing personalized solutions for buying, renting, and investing. 
+            Our experienced team ensures a smooth and stress-free experience. We prioritize trust, 
+            transparency, and customer satisfaction. Start your journey with us today and find the perfect property!.</p>
+        <h3 style="margin-top: 100px;">Who are we?</h3>
+        <p>Our team is comprised of passionate and dedicated professionals who are committed to delivering 
+           exceptional services. We are a group of enthusiastic students working together to develop this platform,
+           aiming to empower clients in their quest to find their dream rental homes.
+           With the help of our friendly AI assistant, we strive to make this journey easier and more enjoyable for everyone.
+           Together, we’re excited to create a seamless experience that brings you one step closer to the perfect place to call home!
+           Feel free to let me know if you'd like any further adjustments!</p>
+           <p class="thank-you">Thank you for considering us on your journey!</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:contact@immobiliereDZ.com">contact@immobiliereDZ.com</a></p>
+        <p>Phone: <a href="tel:+213123456789">+213 123 456 789</a></p>
+    </div>
+    <!-- Modal Structure -->
+    <div id="rentalModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div id="modalImages" class="modal-images"></div>
+        <p id="modalDescription"></p>
+    </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
